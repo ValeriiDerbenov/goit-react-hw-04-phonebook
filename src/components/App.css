@@ -1,0 +1,10 @@
+section {
+  border-radius: 12px;
+  /* border: 1px solid black; */
+  background-color: #cccbed;
+  width: 500px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
