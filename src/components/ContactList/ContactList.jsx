@@ -2,8 +2,8 @@ import { List } from "./ContactList.styled";
 import PropTypes from 'prop-types';
 
 
-export const ContactList =(({contacts, deleteContact}) => {
-	const elements = contacts.map(({id, name, number}) => <li key={id}>{name}: {number} <button onClick={() => deleteContact(id)} type="button">Delete</button></li>)
+export const ContactList =(({contacts, onRemoveContact}) => {
+	const elements = contacts.map(({id, name, number}) => <li key={id}>{name}: {number} <button onClick={() => onRemoveContact(id)} type="button">Delete</button></li>)
 	return (
 		<List>
 			{elements}
@@ -12,6 +12,6 @@ export const ContactList =(({contacts, deleteContact}) => {
 
 	ContactList.propTypes = {
 		contacts: PropTypes.array.isRequired,
-		deleteContact: PropTypes.func.isRequired,
+		onRemoveContact: PropTypes.func.isRequired
 	};
 	
