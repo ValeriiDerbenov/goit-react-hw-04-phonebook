@@ -1,6 +1,6 @@
 // import PropTypes from 'prop-types';
 import { useState } from "react";
-import { nanoid } from "nanoid";
+// import { nanoid } from "nanoid";
 import { Button, Form } from "./ContactForm.styled";
 
 const ContactForm = ({ onSubmit }) => {
@@ -8,8 +8,8 @@ const ContactForm = ({ onSubmit }) => {
   const [number, setNumber] = useState('');
 
   // Генерация уникальных идентификаторов для полей формы.
-  const nameInputId = nanoid();
-  const numberInputId = nanoid();
+  // const nameInputId = nanoid();
+  // const numberInputId = nanoid();
 
   // Обработка отправки формы.
   const handleSubmit = event => {
@@ -39,10 +39,12 @@ const ContactForm = ({ onSubmit }) => {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <label htmlFor={nameInputId}>
+      <label 
+      // htmlFor={nameInputId}
+      >
         Name
         <input
-          id={nameInputId}
+          // id={nameInputId}
           type="text"
           name="name"
           value={name}
@@ -53,10 +55,12 @@ const ContactForm = ({ onSubmit }) => {
         />
       </label>
 
-      <label htmlFor={numberInputId}>
+      <label 
+      // htmlFor={numberInputId}
+      >
         Number
         <input          
-          id={numberInputId}
+          // id={numberInputId}
           type="tel"
           name="number"
           value={number}
