@@ -42,6 +42,7 @@ const ContactForm = ({ onSubmit }) => {
       <label htmlFor={nameInputId}>
         Name
         <input
+          id={nameInputId}
           type="text"
           name="name"
           value={name}
@@ -54,7 +55,8 @@ const ContactForm = ({ onSubmit }) => {
 
       <label htmlFor={numberInputId}>
         Number
-        <input
+        <input          
+          id={numberInputId}
           type="tel"
           name="number"
           value={number}
